@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PokeClicker</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="main.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="body">
+    <div class="pokeContainer">
+        <div class="pokeHeader">
+            <h2 id="name" class="headerText"></h2>
+            <h4 id="hp" class="headerText"></h4>
+        </div>
+        <img class="enemyPoke" src="">
+    </div>
+    <div class="menuContainer">
+        <div class="menuStats">
+            <h1 class="menuHeader">Menu</h1>
+            <div class="menuDiv">
+                <h3 class="menuText">Money:</h3>
+                <p class="menuValue" id="money">0¢</p>
+            </div>
+            <div class="menuDiv">
+                <h3 class="menuText">Attack</h3>
+                <p class="menuValue" id="attack">lvl 1</p>
+                <button class="upgradeButton" id="upgradeAtt">5¢</button>
+            </div>
+            <div class="menuDiv">
+                <h3 class="menuText">Crit Chance</h3>
+                <p class="menuValue" id="critChance">lvl 1</p>
+                <button class="upgradeButton" id="upgradeCritC">5¢</button>
+            </div>
+            <div class="menuDiv">
+                <h3 class="menuText">Crit Damage</h3>
+                <p class="menuValue" id="critDamage">lvl 1</p>
+                <button class="upgradeButton" id="upgradeCritD">5¢</button>
+            </div>
+        </div>
+        <div class="menuShop"></div>
+    </div>
+    <img class="platform" src="./resources/platform.png">
+    <!-- <div class="introScreen">
+        
+    </div> -->
+</body>
+</html>

@@ -1,0 +1,181 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 10px;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+    background-image: url(./resources/brick.jpg);
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+/* html, body {margin: 0; height: 100%; overflow: hidden} */
+
+.introScreen {
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.9);
+    border: thin solid red;
+    top:0;
+    left:0;
+    bottom:0;
+    right:0;
+    height:100%;
+    width:100%;
+    z-index: 5;
+}
+.pokeContainer {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: auto;
+    margin-right: auto;
+    width: 60%;
+    height: 700px;
+    position: relative;
+    top: 50px;
+    border: thin solid rgb(117, 117, 117);
+    background-image: url('./resources/darkForest.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.pokeHeader {
+    z-index: 1;
+    width: 1000px;
+    height: 100px;
+    margin-left: auto;
+    margin-right: auto;
+    border: thin solid rgb(104, 104, 104);
+    position: relative;
+    top: 30px;
+}
+#name {
+    position: relative;
+    top: 20px;
+    width: 50%;
+    margin: auto;
+    text-align: center;
+    color: white;
+    font-size: xx-large;
+    text-shadow: 0 0 3px #000000, 0 0 5px #000000;
+}
+#hp {
+    width: 50%;
+    margin: auto;
+    text-align: center;
+    color: white;
+    font-size: ;
+    text-shadow: 0 0 3px #000000, 0 0 5px #000000;
+}
+
+.enemyPoke {
+    position: relative;
+    top: 0px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 500px;
+    height: 500px;
+    z-index: 2;
+    border: thin solid rgb(119, 119, 119);
+    -webkit-user-drag: none;
+    -webkit-user-select: none;
+    
+}
+.platform {
+    width: 800px;
+    position: absolute;
+    z-index: 1;
+    pointer-events: none;
+    -webkit-user-drag: none;
+    -webkit-user-select: none;
+    top: 75%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.menuContainer {
+    border: thin solid rgb(255, 255, 255);
+    background-color: tan;
+    height: 500px;
+    width: 250px;
+    position: relative;
+    bottom: 500px;
+    z-index: 2;
+}
+.menuHeader {
+    text-align: center;
+    color: white;
+    text-shadow: 0 0 3px #000000, 0 0 5px #0000FF;
+    font-size: xx-large;
+}
+.menuDiv {
+    display: flex;
+    flex-wrap: nowrap;
+    width: 250px;
+    position: relative;
+    border: thin dotted white;
+    right: 20px;
+}
+.menuText {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    text-align: left;
+    position: relative;
+    color: white;
+    text-shadow: 0 0 3px #000000, 0 0 5px #0000FF;
+    font-size: large;
+}
+.menuValue {
+    position: absolute;
+    left: 140px;
+    color: white;
+    text-shadow: 0 0 3px #000000, 0 0 5px #0000FF;
+    font-weight: bold;
+    font-size: larger;
+}
+.upgradeButton {
+    position: absolute;
+    left: 200px;
+    top: 10px;
+    height: 40px;
+    width: 40px;
+}
