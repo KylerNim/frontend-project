@@ -61,7 +61,7 @@ document.addEventListener("DOMContentLoaded", function(arg) {
         ($('.shopButton').text() === 'GACHA SHOP') ? $('.shopButton').text('MENU') : $('.shopButton').text('GACHA SHOP');
     });
     $('.gachaButton').click(()=>{
-        if (userStats.money >= 100) {
+        if (userStats.money >= 100 && numberOfPokes < 10) {
             buySound();
             let entryStr = randomPokedex().toString();
             $.get('https://pokeapi.co/api/v2/pokemon/' + entryStr, (data)=>{
@@ -200,7 +200,7 @@ document.addEventListener("DOMContentLoaded", function(arg) {
     pokeGeneration();
     ///////////////////////////////////////////////////Stats&Money////////////////////////////////////////////
     let userStats = {
-        money: 100000,
+        money: 0,
         hp: 100,
         regen: 0,
         attack: 5,
