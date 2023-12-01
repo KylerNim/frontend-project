@@ -47,11 +47,35 @@ table {
 	border-collapse: collapse;
 	border-spacing: 0;
 }
-/* html, body {margin: 0; height: 100%; overflow: hidden} */
+html, body {margin: 0; height: 100%; overflow: hidden}
 
+.banner {
+    background-color: #091425;
+    position: absolute;
+    width: 100%;
+    left: 0%;
+    top: 0%;
+    height: 30px;
+}
+.bannerText {
+    position: relative;
+    left: 0%;
+    height: 25px;
+    width: auto;
+}
+.stageText {
+    color: white;
+    position: absolute;
+    left: 46.3%;
+    top: 50px;
+    height: 25px;
+    width: auto;
+    font-size: x-large;
+    text-shadow: 0 0 4px #000000, 0 0 6px #000000;
+}
 .introScreen {
     position: absolute;
-    background-color: rgba(0, 0, 0, 0.9);
+    background-color: rgba(0, 0, 0, 0.98);
     border: thin solid red;
     top:0;
     left:0;
@@ -61,19 +85,50 @@ table {
     width:100%;
     z-index: 5;
 }
+.introBox {
+    position: relative;
+    height: 630px;
+    width: 800px;
+    background-image: url(./resources/introImage.jpg);
+    left: 535px;
+    top: 100px;
+    overflow: hidden;
+}
+.introText {
+    position: relative;
+    color: white;
+    font-size: xx-large;
+    text-shadow: 0 0 4px #000000, 0 0 6px #000000;
+    width: 80%;
+    text-align: center;
+    word-spacing: normal;
+    line-height: 2.8;
+    left: 8%;
+}
+.introButton {
+    position: absolute;
+    color: white;
+    background-color: #dd6a77;
+    height: 50px;
+    width: 500px;
+    z-index: 5;
+    bottom: 160px;
+    left: 700px;
+}
+
 .pokeContainer {
     display: flex;
     flex-wrap: wrap;
     margin-left: auto;
     margin-right: auto;
     width: 60%;
-    height: 700px;
+    height: 662px;
     position: relative;
-    top: 50px;
-    border: thin solid rgb(117, 117, 117);
-    background-image: url('./resources/darkForest.jpg');
+    top: 78px;
+    /* border: thin solid rgb(117, 117, 117); */
     background-repeat: no-repeat;
     background-size: cover;
+    outline: 6px solid #091425;
 }
 
 .pokeHeader {
@@ -82,9 +137,9 @@ table {
     height: 100px;
     margin-left: auto;
     margin-right: auto;
-    border: thin solid rgb(104, 104, 104);
+    /* border: thin solid rgb(104, 104, 104); */
     position: relative;
-    top: 30px;
+    top: 0px;
 }
 #name {
     position: relative;
@@ -96,13 +151,28 @@ table {
     font-size: xx-large;
     text-shadow: 0 0 3px #000000, 0 0 5px #000000;
 }
+.healthDiv{
+    position: relative;
+    right: 80px;
+    top: 10px;
+    display: flex;
+    flex-wrap: nowrap;
+}
 #hp {
+    position: relative;
+    top: 10px;
     width: 50%;
     margin: auto;
     text-align: center;
     color: white;
-    font-size: ;
     text-shadow: 0 0 3px #000000, 0 0 5px #000000;
+}
+.healthBar {
+    position: relative;
+    left: 50%;
+    top: 50%;
+    background: green;
+    border: thin solid white;
 }
 
 .enemyPoke {
@@ -114,7 +184,7 @@ table {
     width: 500px;
     height: 500px;
     z-index: 2;
-    border: thin solid rgb(119, 119, 119);
+    /* border: thin solid rgb(119, 119, 119); */
     -webkit-user-drag: none;
     -webkit-user-select: none;
     
@@ -131,13 +201,93 @@ table {
     transform: translate(-50%, -50%);
 }
 
+.profile {
+    position: relative;
+    right: 3px;
+    top: 10px;
+    height: 250px;
+    width: auto;
+    border: thin solid white;
+}
+.inventory {
+    position: absolute;
+    right: 0%;
+    top: 13%;
+    height: 600px;
+    width:250px;
+    background-color: #091425;
+    border: thin solid white;
+}
+.shop {
+    position: absolute;
+    right: 20;
+    top: 12.77%;
+    height: 600px;
+    width: 250px;
+    background-color: #091425;
+    border: thin solid white;
+    z-index: 5;
+}
+.shopButton {
+    position: absolute;
+    top: 0%;
+    left: 271px;
+    height: 70px;
+    width: 70px;
+    outline: thin solid white;
+    background-color: #314151;
+    color: white;
+}
+.shopHeader {
+    position: absolute;
+    height: 50px;
+    width: 250px;
+    left: 0%;
+    top: 0%;
+    text-align: center;
+    color: white;
+    font-size: xx-large;
+    border: thin dotted white;
+    text-shadow: 0 0 3px #000000, 0 0 5px #0000FF;
+}
+.shopDiv {
+    position: absolute;
+    height: 50px;
+    width: 250px;
+    left: 0%;
+    color: white;
+    font-size: large;
+    text-shadow: 0 0 3px #000000, 0 0 5px #0000FF;
+    top: 100px;
+    vertical-align: auto;
+    text-align: center;
+}
+.gachaButton {
+    position: relative;
+    height: 150px;
+    width: auto;
+    top: 150px;
+    left: 40px;
+}
+.gachaPrice {
+    position: absolute;
+    left: 0%;    
+    color: white;
+    width: 250px;
+    text-align: center;
+    top: 320px;
+    font-size: large;
+}
+.hidden {
+    visibility: hidden;
+}
 .menuContainer {
     border: thin solid rgb(255, 255, 255);
-    background-color: tan;
-    height: 500px;
+    background-color: #091425;
+    height: 600px;
     width: 250px;
     position: relative;
-    bottom: 500px;
+    bottom: 580px;
     z-index: 2;
 }
 .menuHeader {
@@ -174,8 +324,42 @@ table {
 }
 .upgradeButton {
     position: absolute;
-    left: 200px;
+    left: 210px;
     top: 10px;
     height: 40px;
     width: 40px;
+    background-color: #314151;
+    color: white;
 }
+
+/*//////////////////////////////////////////////////////////ANIMATIONS/////*/
+@keyframes shake{
+    0% { transform: skewX(-15deg); }
+    5% { transform: skewX(15deg); }
+    10% { transform: skewX(-15deg); }
+    15% { transform: skewX(15deg); }
+    20% { transform: skewX(0deg); }
+    100% { transform: skewX(0deg); }
+   }
+
+
+  
+  #scroll-text {
+    height: 100%;
+    text-align: center;
+    
+    /* animation properties */
+    -moz-transform: translateY(100%);
+    -webkit-transform: translateY(100%);
+    transform: translateY(100%);
+    
+    -moz-animation: my-animation 50s linear;
+    -webkit-animation: my-animation 50s linear;
+    animation: my-animation 50s linear;
+  }
+  
+  /* for Chrome */
+  @-webkit-keyframes my-animation {
+    from { -webkit-transform: translateY(100%); }
+    to { -webkit-transform: translateY(-300%); }
+  }

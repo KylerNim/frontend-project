@@ -4,21 +4,33 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PokeClicker</title>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="//code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="//code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
     <script src="main.js"></script>
     <link rel="stylesheet" href="style.css">
 </head>
 <body class="body">
+    <div class="banner">
+        <img class='bannerText' src="./resources/titleText.png">
+        <h1 class="stageText">Level 1 - 1</h1>
+    </div>
     <div class="pokeContainer">
         <div class="pokeHeader">
             <h2 id="name" class="headerText"></h2>
-            <h4 id="hp" class="headerText"></h4>
+            <div class="healthDiv">
+                <progress id="enemyHealthBar" class="healthBar" value="100" max="100"></progress>
+                <h4 id="hp" class="headerText"></h4>
+            </div>
         </div>
         <img class="enemyPoke" src="">
     </div>
     <div class="menuContainer">
         <div class="menuStats">
             <h1 class="menuHeader">Menu</h1>
+            <!-- <div class="menuDiv">
+                <h3 class="menuText">HP:</h3>
+                <p class="menuValue" id="hp">100/100hp</p>
+            </div> -->
             <div class="menuDiv">
                 <h3 class="menuText">Money:</h3>
                 <p class="menuValue" id="money">0¢</p>
@@ -39,11 +51,27 @@
                 <button class="upgradeButton" id="upgradeCritD">5¢</button>
             </div>
         </div>
-        <div class="menuShop"></div>
+        <img class="profile" src="./resources/smashKetchum.png">
+        <button class="shopButton">GACHA SHOP</button>
     </div>
     <img class="platform" src="./resources/platform.png">
-    <!-- <div class="introScreen">
-        
-    </div> -->
+    <div class="inventory"></div>
+    <div class="shop hidden">
+        <div class="shopHeader">Shop</div>
+        <div class='shopDiv' id="gachaButton">Buy Random Pokemon:</div>
+        <img class="gachaButton" src="./resources/dice.png">
+        <h1 class="gachaPrice">100¢</h1>
+    </div>
+    <div class="introScreen">
+        <div class="introBox">
+            <div id="scroll-text">
+                <p class="introText">Your journey starts in the lovely Skid Town, inside the wide region of Ghanto.</p>
+                <p class="introText">Pokemon have all lost their minds, and have begun attacking anyone who stands in their way.</p>
+                <p class="introText">With his trusty iron bat, our Hero Smash Ketchum will have to beat and pummel his way through hourdes of blood-thirsty monsters in order to save his friends and family from sure demise.</p>
+                <p class="introText">Will you succeed and leave thousands of unrecognizable pokemon corpses in your wake, or will you be torn asunder by the fiends you once saw as your friends...</p>
+            </div>
+        </div>
+        <button class="introButton">Continue</button>
+    </div>
 </body>
 </html>
