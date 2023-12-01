@@ -76,7 +76,7 @@ html, body {margin: 0; height: 100%; overflow: hidden}
 .introScreen {
     position: absolute;
     background-color: rgba(0, 0, 0, 0.98);
-    border: thin solid red;
+    border: thin solid rgb(0, 0, 0);
     top:0;
     left:0;
     bottom:0;
